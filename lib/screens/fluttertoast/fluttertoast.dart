@@ -8,18 +8,24 @@ class FlutterToastPages extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(centerTitle: true, title: const Text("FlutterToast Page")),
-      body:  Container(
+      body: Container(
         child: Stack(
           children: [
-           Container(
-            height: double.infinity,
-             child: Image.network('https://source.unsplash.com/random',  fit: BoxFit.cover,),),
+            Container(
+              height: double.infinity,
+              child: Image.network(
+                'https://source.unsplash.com/random',
+                fit: BoxFit.cover,
+              ),
+            ),
             Positioned(
               bottom: 1,
               right: 1,
               child: ElevatedButton(
                 child: const Text("Tasdiqlang"),
-                onPressed: () {fluttertoast();},
+                onPressed: () {
+                  fluttertoast();
+                },
               ),
             )
           ],
@@ -27,12 +33,13 @@ class FlutterToastPages extends StatelessWidget {
       ),
     );
   }
- get  fluttertoast{
-return  Fluttertoast.showToast(msg: "Tasdiqlanishini kuting ",
-  toastLength:  Toast.LENGTH_SHORT,
-  backgroundColor:  Colors.red,
-  textColor:  Colors.teal,
-  fontSize:  20.0
-);
-   }
+
+  get fluttertoast {
+    return Fluttertoast.showToast(
+        msg: "Tasdiqlanishini kuting ",
+        toastLength: Toast.LENGTH_SHORT,
+        backgroundColor: Colors.red,
+        textColor: Colors.teal,
+        fontSize: 20.0);
+  }
 }

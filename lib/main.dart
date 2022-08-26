@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
       onGenerateRoute: MyRoutes.instanse.onGenereteRoute,
-      initialRoute: "/flutter_toats",
+      initialRoute: "/snakBar",
     );
   }
 }
